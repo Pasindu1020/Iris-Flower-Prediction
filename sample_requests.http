@@ -1,0 +1,28 @@
+
+### Health
+GET http://127.0.0.1:8000/
+
+### Model info
+GET http://127.0.0.1:8000/model-info
+
+### Single prediction
+POST http://127.0.0.1:8000/predict
+Content-Type: application/json
+
+{
+  "sepal_length": 5.1,
+  "sepal_width": 3.5,
+  "petal_length": 1.4,
+  "petal_width": 0.2
+}
+
+### Batch prediction
+POST http://127.0.0.1:8000/predict-batch
+Content-Type: application/json
+
+{
+  "items": [
+    {"sepal_length": 5.1, "sepal_width": 3.5, "petal_length": 1.4, "petal_width": 0.2},
+    {"sepal_length": 6.7, "sepal_width": 3.0, "petal_length": 5.0, "petal_width": 1.7}
+  ]
+}
